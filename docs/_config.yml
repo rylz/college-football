@@ -2,7 +2,7 @@ theme: jekyll-theme-slate
 
 # Social
 title:              College Football Analysis
-description:        "Schema, data model, and scripts for analyzing college football data"
+description:        "Because predicting a sport people love for its unpredictability seemed like a great idea"
 twitter:            rylz
 authors:            "Riley Patterson"
 #
