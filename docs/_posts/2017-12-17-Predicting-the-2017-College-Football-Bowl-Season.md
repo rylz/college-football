@@ -96,6 +96,6 @@ All of the following results were produced from a random forest model trained wi
 In January when all is said and done, I intend to loop back and evaluate both the performance of this model for predicting individual scores in bowl games as well as its performance in predicting outcomes. The model valuing margin of victory produces fairly different predictions from the model that follows the maxim "a win's a win's a win," so it will be particularly interesting to see if one performs significantly better than the other.
 
 ### References and Code
-1. The script that runs this analysis is [available in my college-football repository](../scripts/predict/bowl_outcome.py).
+1. The script that runs this analysis is [available in my college-football repository](https://github.com/rylz/college-football/tree/master/scripts/predict/bowl_outcome.py).
 2. The PageRank implementation used here is [from python-graph](https://github.com/pmatiello/python-graph/blob/master/core/pygraph/algorithms/pagerank.py), and I didn't change its default scaling factor of 0.85.
 3. Data for the analysis was gathered from publicly available sites and APIs. I didn't include it in my repository, but if you would like to use the data, just let me know!
