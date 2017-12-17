@@ -1,9 +1,8 @@
 ---
 title: Predicting the 2017 College Football Bowl Season with Pagerank
 layout: post
+excerpt: For a page to "rank higher," it must be linked to by pages that also rank high. If instead of web pages we consider college football teams, and instead of links we consider games with the loser "endorsing" the winner, this approach can be seen as combining some sense of "strength of schedule" with win-loss record -- beating a highly ranked team adds to a team's value tremendously, while beating an 0-11 team has close to zero value. Importantly, the fact that the algorithm is applied iteratively incorporates transitivity of wins to an extent, allowing it to produce meaningful results even when connectivity is fairly low within the graph, as in college football. In the past, [I have applied PageRank to ranking conferences](https://www.quora.com/How-do-NCAA-football-conferences-rank-in-light-of-bowl-game-results-in-2013-2014/answer/Riley-Patterson) in light of postseason results at the end of the bowl season, which has often produced subjectively more aggreeable results than traditional methods, like ranking by win-loss percentages. I have also used PageRank with some success as a feature in a model predicting AP poll results given a week's game outcomes. This year, I want to extend this approach to predicting actual game outcomes. This weekend marks the beginning of the 2017 college football bowl season. Bowl games almost always produce matchups of teams from different conferences who rarely have played common opponents, so this is a good opportunity to see how well a PageRank-supported model can predict results between teams that are distant from each other in a graph of prior matchups.
 ---
-
-# Predicting the 2017 College Football Bowl Season with Pagerank
 
 _If you are more interested in the game predictions than the technical background, skip ahead to the Results section._
 
