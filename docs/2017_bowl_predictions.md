@@ -1,6 +1,7 @@
 ---
 title: Predicting the 2017 College Football Bowl Season with Pagerank
 layout: post
+theme: jekyll-theme-slate
 ---
 
 # Predicting the 2017 College Football Bowl Season with Pagerank
