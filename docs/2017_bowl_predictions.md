@@ -1,3 +1,8 @@
+---
+title: Predicting the 2017 College Football Bowl Season with Pagerank
+layout: post
+---
+
 # Predicting the 2017 College Football Bowl Season with Pagerank
 
 _If you are more interested in the game predictions than the technical background, skip ahead to the Results section._

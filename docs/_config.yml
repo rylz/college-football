@@ -1,1 +1,7 @@
 theme: jekyll-theme-slate
+
+# Social
+title:              College Football
+description:        "Schema, data model, and scripts for analyzing college football data"
+twitter:            rylz
+authors:            "Riley Patterson"
