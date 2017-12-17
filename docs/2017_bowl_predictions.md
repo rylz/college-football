@@ -23,7 +23,7 @@ This problem has intrigued me for a long time. I'm particularly drawn to its sim
 5. Pac 12 (0.0826)      5. Big 12 (0.0855)      5. ACC (0.0781)
 ```
 
-I have also used PageRank with some success as a feature in a model predicting AP poll results given a week's game outcomes. This year, I want to extend this approach to predicting actual game outcomes. Today marks the beginning of the 2017 college football bowl season. Bowl games almost always produce matchups of teams from different conferences who rarely have played common opponents, so this is a good opportunity to see how well a PageRank-supported model can predict results between teams that are distant from each other in a graph of prior matchups.
+I have also used PageRank with some success as a feature in a model predicting AP poll results given a week's game outcomes. This year, I want to extend this approach to predicting actual game outcomes. This weekend marks the beginning of the 2017 college football bowl season. Bowl games almost always produce matchups of teams from different conferences who rarely have played common opponents, so this is a good opportunity to see how well a PageRank-supported model can predict results between teams that are distant from each other in a graph of prior matchups.
 
 ### Models
 
@@ -96,3 +96,6 @@ All of the following results were produced from a random forest model trained wi
 | National Championship | #3 georgia 16<br>**#1 clemson 26** | #2 oklahoma 27<br>**#1 clemson 33** |
 
 ## References and Code
+1. The script that runs this analysis is [available in my college-football repository](../scripts/predict/bowl_outcome.py).
+2. The PageRank implementation used here is [from python-graph](https://github.com/pmatiello/python-graph/blob/master/core/pygraph/algorithms/pagerank.py), and I didn't change its default scaling factor of 0.85.
+3. Data for the analysis was gathered from publicly available sites and APIs. I didn't include it in my repository, but if you would like to use the data, just let me know!
