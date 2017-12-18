@@ -93,12 +93,11 @@ if __name__ == '__main__':
     regr = MODELS[args.model](**kwargs)
     train_points, train_vectors = compile_data(train, input_vector)
     regr.fit(train_vectors, train_points)
-    #print("R^2 of training set:", regr.score(train_vectors, train_points))
+    print("R^2 of training set:", regr.score(train_vectors, train_points))
     test_points, test_vectors = compile_data(test, input_vector)
-    #print("R^2 of test set:", regr.score(test_vectors, test_points))
+    print("R^2 of test set:", regr.score(test_vectors, test_points))
     if args.model == 'rf':
-        #print("Feature importances:", regr.feature_importances_)
-        pass
+        print("Feature importances:", regr.feature_importances_)
 
     bowl_games = [cfb.game.Game(g) for g in cfb.game.lookup(year=args.year, week=20)]
     predict_vectors = []
@@ -117,23 +116,13 @@ if __name__ == '__main__':
         summary += cfb.team.Team(team_id).nickname
         return summary
 
-    win_results = []
     for i, g in enumerate(bowl_games):
         home = g.game_info['home_team']
         away = g.game_info['away_team']
         dt = datetime.fromtimestamp(g.game_info['kickoff_time'])
-
-        win_results += [(
-                f'{g.series}',
-                '{}{} {:.0f}{}<br>{}{} {:.0f}{}'.format(
-                    '**' if predict_points[2*i] > predict_points[2*i + 1] else '',
-                    team_label(away),
-                    predict_points[2*i],
-                    '**' if predict_points[2*i] > predict_points[2*i + 1] else '',
-                    '**' if predict_points[2*i] < predict_points[2*i + 1] else '',
-                    team_label(home),
-                    predict_points[2*i + 1],
-                    '**' if predict_points[2*i] < predict_points[2*i + 1] else ''))]
+        print(f'{g.series} ({dt.month}/{dt.day}):')
+        print(team_label(away), predict_points[2*i])
+        print(team_label(home), predict_points[2*i + 1])
 
     # finally, determine the national championship matchup and predict it!
     if predict_points[-4] > predict_points[-3]:
@@ -148,81 +137,6 @@ if __name__ == '__main__':
             input_vector(rose_bowl_winner, sugar_bowl_winner),
             input_vector(sugar_bowl_winner, rose_bowl_winner)]
     predict_points = regr.predict(predict_vectors)
-    win_results += [(
-            'National Championship',
-            '{}{} {:.0f}{}<br>{}{} {:.0f}{}'.format(
-                '**' if predict_points[0] > predict_points[1] else '',
-                team_label(rose_bowl_winner),
-                predict_points[0],
-                '**' if predict_points[0] > predict_points[1] else '',
-                '**' if predict_points[0] < predict_points[1] else '',
-                team_label(sugar_bowl_winner),
-                predict_points[1],
-                '**' if predict_points[0] < predict_points[1] else ''))]
-
-    # redefine team_pr using victory margin
-    team_pr = cfb.rank.pagerank.TeamPagerank(games, margin_of_victory=True)
-    team_pr.compile()
-    team_pr = {team_id: pr for team_id, pr in team_pr.pr}
-
-    regr = MODELS[args.model](**kwargs)
-    train_points, train_vectors = compile_data(train, input_vector)
-    regr.fit(train_vectors, train_points)
-    #print("R^2 of training set:", regr.score(train_vectors, train_points))
-    test_points, test_vectors = compile_data(test, input_vector)
-    #print("R^2 of test set:", regr.score(test_vectors, test_points))
-
-    bowl_games = [cfb.game.Game(g) for g in cfb.game.lookup(year=args.year, week=20)]
-    predict_vectors = []
-    for g in bowl_games:
-        home = g.game_info['home_team']
-        away = g.game_info['away_team']
-        predict_vectors.append(input_vector(away, home))
-        predict_vectors.append(input_vector(home, away))
-    predict_points = regr.predict(predict_vectors)
-
-    win_results2 = []
-    for i, g in enumerate(bowl_games):
-        home = g.game_info['home_team']
-        away = g.game_info['away_team']
-        dt = datetime.fromtimestamp(g.game_info['kickoff_time'])
-
-        win_results2 += [(
-                f'{g.series}',
-                '{}{} {:.0f}{}<br>{}{} {:.0f}{}'.format(
-                    '**' if predict_points[2*i] > predict_points[2*i + 1] else '',
-                    team_label(away),
-                    predict_points[2*i],
-                    '**' if predict_points[2*i] > predict_points[2*i + 1] else '',
-                    '**' if predict_points[2*i] < predict_points[2*i + 1] else '',
-                    team_label(home),
-                    predict_points[2*i + 1],
-                    '**' if predict_points[2*i] < predict_points[2*i + 1] else ''))]
-
-    # finally, determine the national championship matchup and predict it!
-    if predict_points[-4] > predict_points[-3]:
-        rose_bowl_winner = bowl_games[-2].game_info['away_team']
-    else:
-        rose_bowl_winner = bowl_games[-2].game_info['home_team']
-    if predict_points[-2] > predict_points[-1]:
-        sugar_bowl_winner = bowl_games[-1].game_info['away_team']
-    else:
-        sugar_bowl_winner = bowl_games[-1].game_info['home_team']
-    predict_vectors = [
-            input_vector(rose_bowl_winner, sugar_bowl_winner),
-            input_vector(sugar_bowl_winner, rose_bowl_winner)]
-    predict_points = regr.predict(predict_vectors)
-    win_results2 += [(
-            'National Championship',
-            '{}{} {:.0f}{}<br>{}{} {:.0f}{}'.format(
-                '**' if predict_points[0] > predict_points[1] else '',
-                team_label(rose_bowl_winner),
-                predict_points[0],
-                '**' if predict_points[0] > predict_points[1] else '',
-                '**' if predict_points[0] < predict_points[1] else '',
-                team_label(sugar_bowl_winner),
-                predict_points[1],
-                '**' if predict_points[0] < predict_points[1] else ''))]
-
-    for i in range(len(win_results)):
-        print(win_results[i][0], '|', win_results[i][1], '|', win_results2[i][1])
+    print('National Championship')
+    print(team_label(rose_bowl_winner), predict_points[0])
+    print(team_label(sugar_bowl_winner), predict_points[1])
