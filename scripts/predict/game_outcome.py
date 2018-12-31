@@ -1,7 +1,7 @@
 #!/usr/bin/python
-__doc__ = """Predict bowl outcomes given season results.
+__doc__ = """Predict game outcomes given season results to date.
 
-Uses team and conference pagerank differences, final AP ranking differences, average points allowed
+Uses team and conference pagerank differences, latest AP ranking differences, average points allowed
 and gained to predict each team's points scored independently. Performs a simple regression on
 regular season results using ranking to date as input.
 
@@ -47,8 +47,9 @@ MODELS = {
 if __name__ == '__main__':
     # Command line parameters
     parser = argparse.ArgumentParser(
-            description='Predict bowl outcomes given season results')
+            description='Predict game outcomes given season results to date')
     parser.add_argument('-y', '--year', action='store', type=int, required=True)
+    parser.add_argument('-w', '--week', action='store', type=int, required=True)
     parser.add_argument(
             '-m', '--model', action='store', type=str, choices=MODELS.keys(), default='linear')
     parser.add_argument('-v', '--victorymargin', action='store_true')
@@ -61,27 +62,26 @@ if __name__ == '__main__':
         assert args.model == 'rf', \
                 'depth and leafsize are parameters for random forests only.'
 
-    regular_season_game_ids = set(cfb.game.lookup(year=args.year)).difference(
-            set(cfb.game.lookup(year=args.year, week=20)))
-    games = [cfb.game.Game(g) for g in regular_season_game_ids]
+    regular_season_game_ids = cfb.game.lookup(year=args.year)
+    games = list(filter(
+        lambda g: g.game_info['week'] < args.week, [cfb.game.Game(g) for g in regular_season_game_ids]))
     team_pr = cfb.rank.pagerank.TeamPagerank(games, margin_of_victory=args.victorymargin)
     team_pr.compile()
     team_pr = {team_id: pr for team_id, pr in team_pr.pr}
     conf_pr = cfb.rank.pagerank.ConferencePagerank(games)
     conf_pr.compile()
     conf_pr = {conf_id: pr for conf_id, pr in conf_pr.pr}
-    # TODO better handling for seasons with uncommon numbers of weeks
-    final_ap = {team_id: rank for team_id, rank, _ in cfb.ranking.HistoricalRanking(
-        cfb.ranking.ranking_type.ap_poll, args.year, 14).get_teams()}
+    latest_ap = {team_id: rank for team_id, rank, _ in cfb.ranking.HistoricalRanking(
+        cfb.ranking.ranking_type.ap_poll, args.year, args.week - 1).get_teams()}
 
     test = random.sample(games, len(games)//10)
     train = list(set(games).difference(set(test)))
 
     def input_vector(team_id, opp_id):
-        pr_diff = team_pr[team_id] - team_pr[opp_id]
+        pr_diff = team_pr.get(team_id, 0) - team_pr.get(opp_id, 0)
         conf_pr_diff = conf_pr[cfb.team.Team(team_id).conference_id] - \
                 conf_pr[cfb.team.Team(opp_id).conference_id] 
-        ap_rank_diff = final_ap.get(team_id, 26) - final_ap.get(opp_id, 26)
+        ap_rank_diff = latest_ap.get(team_id, 26) - latest_ap.get(opp_id, 26)
         opp_points_allowed = cfb.features.points.PointsAllowedPerGame(args.year, opp_id).value
         ppg = cfb.features.points.PointsPerGame(args.year, team_id).value
         if not args.stats_feature:
@@ -105,9 +105,9 @@ if __name__ == '__main__':
     if args.model == 'rf':
         print("Feature importances:", regr.feature_importances_)
 
-    bowl_games = [cfb.game.Game(g) for g in cfb.game.lookup(year=args.year, week=20)]
+    predict_games = [cfb.game.Game(g) for g in cfb.game.lookup(year=args.year, week=args.week)]
     predict_vectors = []
-    for g in bowl_games:
+    for g in predict_games:
         home = g.game_info['home_team']
         away = g.game_info['away_team']
         predict_vectors.append(input_vector(away, home))
@@ -117,40 +117,22 @@ if __name__ == '__main__':
     # summarize results
     def team_label(team_id):
         summary = ''
-        if team_id in final_ap:
-            summary += f'#{final_ap[team_id]} '
+        if team_id in latest_ap:
+            summary += f'#{latest_ap[team_id]} '
         summary += cfb.team.Team(team_id).nickname
         return summary
 
-    semifinal_winners = []
     game_predictions = {}
-    for i, g in enumerate(bowl_games):
+    for i, g in enumerate(predict_games):
         home = g.game_info['home_team']
         away = g.game_info['away_team']
         dt = datetime.fromtimestamp(g.game_info['kickoff_time'])
-        print(f'{g.series} ({dt.month}/{dt.day}):')
         print(team_label(away), predict_points[2*i])
         print(team_label(home), predict_points[2*i + 1])
+        print()
         game_predictions[g.game_id] = (predict_points[2*i], predict_points[2*i + 1])
-        if g.series == 'Orange Bowl':
-            semifinal_winners.append(max((predict_points[2*i], away), (predict_points[2*i + 1], home))[1])
-        elif g.series == 'Cotton Bowl':
-            semifinal_winners.append(max((predict_points[2*i], away), (predict_points[2*i + 1], home))[1])
 
-    # finally, predict the national championship!
-    predict_vectors = [
-            input_vector(*semifinal_winners),
-            input_vector(*(semifinal_winners[::-1]))]
-    predict_points = regr.predict(predict_vectors)
-    print('National Championship')
-    print(team_label(semifinal_winners[0]), predict_points[-2])
-    print(team_label(semifinal_winners[1]), predict_points[-1])
-
-    # NB we don't save the prediction of the national championship unless we have a game_id for it already, unfortunately
-    ncg_id = cfb.game.lookup(year=args.year, week=20, away_team=semifinal_winners[0], home_team=semifinal_winners[1])
-    if ncg_id:
-        game_predictions[ncg_id[0]] = tuple(predict_points)
-
+    # save predictions for certain models
     if args.model == 'rf':
         if args.victorymargin and args.stats_feature:
             prediction_model = cfb.game.PredictionModelType.pagerank_rf_margin_of_victory_with_opp_ypg

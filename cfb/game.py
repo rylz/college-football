@@ -1,5 +1,7 @@
 import time
 
+from enum import Enum
+
 import cfb
 
 class Game(object):
@@ -47,6 +49,16 @@ class Game(object):
   def series(self):
     """Returns the name of the associated series, if any."""
     return _get_series(_get_game_series(self.game_id))['series_name']
+
+  @property
+  def spread(self):
+    """Returns the spread for the home team, if available."""
+    return _get_spread(self.game_id)
+
+  @property
+  def over_under(self):
+    """Returns the total over under for the game, if available."""
+    return _get_over_under(self.game_id)
 
 
 def _get_game(game_id):
@@ -275,3 +287,121 @@ def team_games_of_season(year, team_id):
             year = %s
     '''
     return [Game(game_id) for game_id in cfb.db.query(sql, (team_id, year))]
+
+
+class PredictionModelType(Enum):
+  pagerank_rf = 1
+  pagerank_rf_margin_of_victory = 2
+  pagerank_rf_with_opp_ypg = 3
+  pagerank_rf_margin_of_victory_with_opp_ypg = 4
+
+
+def get_predictions(year, week):
+  """Return a list of predictions for a given week.
+
+  Returns a list of tuples:
+    (prediction_model, prediction_model_version, game_id, away_points, home_points)."""
+  sql = '''
+    SELECT prediction_model, version, game.game_id, away_points, home_points
+    FROM game_prediction
+    NATURAL JOIN game
+    WHERE
+      year = %s AND
+      week = %s
+  '''
+  params = (year, week)
+  results = cfb.db.query(sql, params)
+
+  return list(results)
+
+
+def get_prediction(game_id, prediction_model, version=0):
+  """Return a prediction for a given game and model.
+
+  Returns a tuple (away_points, home_points)."""
+  sql = '''
+    SELECT away_points, home_points
+    FROM game_prediction
+    WHERE
+      game_id = %s AND
+      prediction_model = %s AND
+      version = %s
+  '''
+  params = (game_id, prediction_model.value, version)
+  result = cfb.db.query(sql, params)[0]
+
+  return result
+
+
+def save_predictions(prediction_data, prediction_model, version=0):
+  """Save predictions for a given model.
+
+  prediction_data should be a dict of the form:
+    game_id: (away_points, home_points)
+  """
+  prediction_time = int(time.time())
+  sql = '''
+    INSERT INTO game_prediction (prediction_model, version, prediction_time, game_id, away_points, home_points)
+    VALUES
+  '''
+  sql += ','.join(f'({prediction_model.value}, {version}, {prediction_time}, {game_id}, {away_points}, {home_points})'
+      for game_id, (away_points, home_points) in prediction_data.items())
+  cfb.db.query(sql)
+
+
+class SportsBook(Enum):
+  five_dimes = 24
+  bovada = 25
+  mybookieag = 29
+
+
+def _get_spread(game_id, book=SportsBook.bovada):
+  """Return the spread for a given game and sports book.
+
+  Returns a single float home_spread."""
+  sql = '''
+    SELECT home_spread
+    FROM game_odds
+    WHERE
+      game_id = %s AND
+      book_id = %s
+  '''
+  params = (game_id, book.value)
+  result = cfb.db.query(sql, params)
+  if result:
+      return result[0][0]
+
+
+def _get_over_under(game_id, book=SportsBook.bovada):
+  """Return the total over-under for a given game and sports book.
+
+  Returns a single float over_under, or None if unavailable."""
+  sql = '''
+    SELECT over_under
+    FROM game_odds
+    WHERE
+      game_id = %s AND
+      book_id = %s
+  '''
+  params = (game_id, book.value)
+  result = cfb.db.query(sql, params)
+  if result:
+      return result[0][0]
+
+
+def record_odds(game_id, book_id, update_time, home_spread=None, over_under=None):
+  """Record the odds for a given game and book.
+
+  If any of the optional kwargs are left as None, we write NULL to the db.
+
+  Note that update_time is not the time we wrote the update to the db, but the time the bookie
+  updated these odds (so we can't just default to now).
+  """
+  assert update_time
+  assert home_spread or over_under, "No use writing all NULLs to the db..."
+  sql = '''
+    REPLACE INTO game_odds (game_id, book_id, update_time, home_spread, over_under) VALUES
+    (%s, %s, %s, %s, %s)
+  '''
+  params = (game_id, book_id, update_time, home_spread or None, over_under or None)
+  cfb.db.query(sql, params)

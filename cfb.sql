@@ -30,7 +30,8 @@ CREATE TABLE team_id_map (
   data_source_id TINYINT UNSIGNED NOT NULL REFERENCES data_source(data_source_id),
   external_id VARCHAR(128) NOT NULL, -- string for flexibility; could be str representation of int
   team_id INT UNSIGNED NOT NULL REFERENCES team(team_id),
-  PRIMARY KEY (data_source_id, external_id)
+  PRIMARY KEY (team_id, data_source_id),
+  INDEX (data_source_id, external_id)
 );
 
 DROP TABLE IF EXISTS ranking_type;
@@ -168,4 +169,34 @@ CREATE TABLE player_play_action (
   action_type TINYINT UNSIGNED NOT NULL,
   yards TINYINT UNSIGNED,
   PRIMARY KEY (game_id, team_id, game_seq_id, player_id)
+);
+
+DROP TABLE IF EXISTS game_prediction;
+CREATE TABLE game_prediction (
+  game_id INT UNSIGNED NOT NULL REFERENCES game(game_id),
+  prediction_model TINYINT UNSIGNED NOT NULL,
+  -- allows for improvements on the same model type to repredict the same game
+  version TINYINT UNSIGNED NOT NULL DEFAULT 0,
+  prediction_time INT UNSIGNED NOT NULL,
+  home_points TINYINT UNSIGNED NOT NULL,
+  away_points TINYINT UNSIGNED NOT NULL,
+  -- json. could include model-specific details, confidence stats, etc.
+  metadata TEXT,
+  PRIMARY KEY (game_id, prediction_model, version)
+);
+
+DROP TABLE IF EXISTS sports_books;
+CREATE TABLE sports_books (
+    book_id int unsigned not null primary key, -- matches yahoo book_id
+    name varchar(32) not null
+);
+
+DROP TABLE IF EXISTS game_odds;
+CREATE TABLE game_odds (
+    game_id int unsigned not null references game(game_id),
+    book_id int unsigned not null references sports_books(book_id),
+    update_time int unsigned not null, -- time this bookie updated these odds
+    home_spread float,
+    over_under float,
+    primary key (game_id, book_id)
 );
