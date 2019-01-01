@@ -6,7 +6,7 @@ excerpt: Last year I posted about predicting the 2017 bowl game outcomes using a
 
 _If you are more interested in this year's game predictions than technical background and a recap of last year's performance, skip ahead to the Predictions section._
 
-Last year I posted about [predicting the 2017 bowl game outcomes using a model based on PageRank]({{ site.baseurl }}/2017-College-Football-Bowl-Season). Now on New Years Eve 2018, with a lot of the most exciting matchups of this year's bowl season kicking off in the next couple of days, I wanted to revisit that model, and discuss some improvements I have made to it since last year. And, of course, there's no time like the present to post this year's predictions both for the remaining 10 bowl games and retrospectively apply the model to the few dozen that have already been played.
+Last year I posted about [predicting the 2017 bowl game outcomes using a model based on PageRank]({{ site.baseurl }}/Predicting-the-2017-College-Football-Bowl-Season/). Now on New Years Eve 2018, with a lot of the most exciting matchups of this year's bowl season kicking off in the next couple of days, I wanted to revisit that model, and discuss some improvements I have made to it since last year. And, of course, there's no time like the present to post this year's predictions both for the remaining 10 bowl games and retrospectively apply the model to the few dozen that have already been played.
 
 ### 2017 Model Retrospective
 
