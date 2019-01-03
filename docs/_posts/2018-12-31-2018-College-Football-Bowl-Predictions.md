@@ -107,14 +107,14 @@ Following are the predictions produced by the model described above, followed by
 | Military Bowl | **cincinnati 35**<br>virginia tech 17 | **cincinnati 35**<br>virginia tech 31 |
 | Sun Bowl | stanford 22<br>**pitt 25** | **stanford 14**<br>pitt 13 |
 | Redbox Bowl | michigan state 21<br>**oregon 23** | michigan state 6<br>**oregon 7** |
-| Liberty Bowl | **#24 missouri 37**<br>oklahoma state 30 |  |
-| Holiday Bowl | northwestern 19<br>**#20 utah 20** |  |
-| TaxSlayer Bowl | **nc state 31**<br>#21 texas a&m 27 |  |
-| Outback Bowl | #18 mississippi state 12<br>**iowa 25** |  |
-| Citrus Bowl | #16 kentucky 20<br>**#13 penn state 29** |  |
-| Fiesta Bowl | #11 lsu 28<br>**#7 ucf 32** |  |
-| Rose Bowl | #9 washington 25<br>**#5 ohio state 31** |  |
-| Sugar Bowl | #14 texas 28<br>**#6 georgia 35** |  |
+| Liberty Bowl | **#24 missouri 37**<br>oklahoma state 30 | #24 missouri 33<br>**oklahoma state 38** |
+| Holiday Bowl | northwestern 19<br>**#20 utah 20** | **northwestern 31**<br>#20 utah 20 |
+| TaxSlayer Bowl | **nc state 31**<br>#21 texas a&m 27 | nc state 13<br>**#21 texas a&m 52** |
+| Outback Bowl | #18 mississippi state 12<br>**iowa 25** | #18 mississippi state 22<br>**iowa 27** |
+| Citrus Bowl | #16 kentucky 20<br>**#13 penn state 29** | **#16 kentucky 27**<br>#13 penn state 24 |
+| Fiesta Bowl | #11 lsu 28<br>**#7 ucf 32** | **#11 lsu 40**<br>#7 ucf 32 |
+| Rose Bowl | #9 washington 25<br>**#5 ohio state 31** | #9 washington 23<br>**#5 ohio state 28** |
+| Sugar Bowl | #14 texas 28<br>**#6 georgia 35** | **#14 texas 28**<br>#6 georgia 21 |
 | CFP Championship | #2 clemson 23<br>**#1 alabama 32** |  |
 
 I will continue to update the "Actual Result" column until the championship is played next weekend, and I fully intend to continue to improve this model in coming seasons. The next step is probably more expressive data to create a model with even more awareness for matchup qualities and the value provided by individual players. 
