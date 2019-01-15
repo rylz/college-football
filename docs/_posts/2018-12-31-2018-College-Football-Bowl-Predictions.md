@@ -70,7 +70,7 @@ Using this feature vector, I trained a random forest model on 90% of regular sea
 
 ### Predictions
 
-Following are the predictions produced by the model described above, followed by the actual results in cases where cames have already been played to completion.
+Following are the predictions produced by the model described above, followed by the actual results in cases where games have already been played to completion.
 
 ![Playoff Bracket Predictions]({{ site.baseurl }}/images/2018_playoff_prediction.png)
 
@@ -115,9 +115,9 @@ Following are the predictions produced by the model described above, followed by
 | Fiesta Bowl | #11 lsu 28<br>**#7 ucf 32** | **#11 lsu 40**<br>#7 ucf 32 |
 | Rose Bowl | #9 washington 25<br>**#5 ohio state 31** | #9 washington 23<br>**#5 ohio state 28** |
 | Sugar Bowl | #14 texas 28<br>**#6 georgia 35** | **#14 texas 28**<br>#6 georgia 21 |
-| CFP Championship | #2 clemson 23<br>**#1 alabama 32** |  |
+| CFP Championship | #2 clemson 23<br>**#1 alabama 32** | **#2 clemson 44**<br>#1 alabama 16 |
 
-I will continue to update the "Actual Result" column until the championship is played next weekend, and I fully intend to continue to improve this model in coming seasons. The next step is probably more expressive data to create a model with even more awareness for matchup qualities and the value provided by individual players. 
+I fully intend to continue to improve this model in coming seasons. The next step is probably more expressive data to create a model with even more awareness for matchup qualities and the value provided by individual players.
 
 ### References and Code
 1. The script that runs this analysis is [available in my college-football repository](https://github.com/rylz/college-football/tree/master/scripts/predict/bowl_outcome.py).
