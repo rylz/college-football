@@ -4,7 +4,7 @@ layout: post
 excerpt: Riley Patterson's weekly college football game predictions produced from a gradually improving pagerank-based model. Updated with comparisons to actual results as those results come in.
 ---
 
-Well, [this year got off to a bit of a rocky start]({{ site.baseurl }}/2019-Week-4-College-Football-Predictions/). While I predicting 41 win-loss outcomes correctly, my predictions went 30-24 against the spread, 24-30 against the over-under. In the past couple of years, I've typically consistently beat chance against both the spread and the over-under as evaluated in late season games. However, my model is dependent entirely on same-season outcomes, so this could just be overexuberance in using the model too early in the season. With that said... on to week 5! I didn't make any changes to the model for this week - it's just the same-old-same-old, but now with greater volume (and likely more valuable as we move into conference play) training data.
+Well, [this year got off to a bit of a rocky start]({{ site.baseurl }}/2019-Week-4-College-Football-Predictions/). While I predicted 41 win-loss outcomes correctly, my predictions went 30-24 against the spread, 24-30 against the over-under. In the past couple of years, I've typically consistently beat chance against both the spread and the over-under as evaluated in late season games. However, my model is dependent entirely on same-season outcomes, so this could just be overexuberance in using the model too early in the season. With that said... on to week 5! I didn't make any changes to the model for this week - it's just the same-old-same-old, but now with greater volume (and likely more valuable as we move into conference play) training data.
 
 ### 2019 Week 5 Game Predictions
 
