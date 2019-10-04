@@ -10,8 +10,8 @@ excerpt: Riley Patterson's weekly college football game predictions produced fro
 
 | Prediction | Actual Result |
 |------------|---------------|
-| **georgia southern 26**<br>south alabama 22 |  |
-| **temple (pa) 32**<br>east carolina 14 |  |
+| **georgia southern 26**<br>south alabama 22 | **georgia southern 20**<br>south alabama 17 |
+| **temple (pa) 32**<br>east carolina 14 | **temple (pa) 27**<br>east carolina 17 |
 | **#18 ucf 37**<br>cincinnati 19 |  |
 | new mexico 27<br>**san jose state 32** |  |
 | **maryland 35**<br>rutgers (nj) 13 |  |
