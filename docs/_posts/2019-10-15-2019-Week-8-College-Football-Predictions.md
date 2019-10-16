@@ -7,6 +7,7 @@ excerpt: Riley Patterson's weekly college football game predictions produced fro
 In [Week 7]({{ site.baseurl }}/2019-Week-7-College-Football-Predictions/), I experimented with a simple feature for global home field advantage, with interesting results: an apparent improvement against the over-under in the random forest model I've been using (despite low reported importance of that feature by the trained model), but uninspiring results in the simpler linear regression model on the same features (where the home advantage feature was given a fairly high weight):
 
 | Model | Correct Winner | Beat Spread | Beat Over-Under |
+|-------|----------------|-------------|-----------------|
 | Random Forest baseline | 36-17 | 27-22 | 23-26 |
 | Linear Regression with home adv | 38-15 | 22-27 | 23-26 |
 | Random Forest with home adv | 35-18 | 27-22 | 29-20 |
@@ -16,6 +17,7 @@ Of course, these differences are quite small and could easily be noise over one 
 ### 2019 Week 8 Game Predictions
 
 | Random Forest | Linear Regression | Actual Result |
+|---------------|-------------------|---------------|
 | south alabama 18<br>**troy 40** | south alabama 21<br>**troy 36** |  |
 | **la lafayet 40**<br>arkansas state 27 | **la lafayet 42**<br>arkansas state 28 |  |
 | ucla 23<br>**stanford 30** | ucla 23<br>**stanford 33** |  |

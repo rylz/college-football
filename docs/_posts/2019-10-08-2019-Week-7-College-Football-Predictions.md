@@ -11,6 +11,7 @@ This week, I wanted to get the ball rolling on model improvements with a simple 
 ### 2019 Week 7 Game Predictions
 
 | Random Forest | Linear Regression | Actual Result |
+|---------------|-------------------|---------------|
 | appalachian state 28<br>**la lafayet 44** | appalachian state 35<br>**la lafayet 42** | **appalachian state 17**<br>la lafayet 7 |
 | syracuse 25<br>**nc state 26** | syracuse 22<br>**nc state 31** | syracuse 10<br>**nc state 16** |
 | la monroe 26<br>texas state 26 | la monroe 30<br>**texas state 32** | **la monroe 24**<br>texas state 14 |
