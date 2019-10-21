@@ -14,7 +14,7 @@ Continuing on [Week 8's analysis of an additional home advantage feature]({{ sit
 
 The impact of home advantage is looking even more marginal than it did last week. On the bright side, I'm continuing to perform well against the spread, but the over-under (which has always been the weaker part of these models) is looking worse than usual. At this point I'm going to stop showing the multiple model predictions each week, focusing in on the random forest model with home advantage as the main one I present. I am still generating and evaluating predictions for half a dozen different models so that I can run stats on them at the end of the year. If I make major model changes in the meantime, I'll revive the multiple weekly prediction format and explain the differences.
 
-### 2019 Week 0 Game Predictions
+### 2019 Week 9 Game Predictions
 
 | Predicted Result | Actual Result |
 |------------------|---------------|
