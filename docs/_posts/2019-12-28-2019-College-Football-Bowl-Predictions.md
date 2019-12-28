@@ -15,6 +15,7 @@ These are predictions produced from an evolution of the model that I have been u
 * difference in AP rank of the opponents
 
 | Bowl Game | Predicted Result | Actual Result |
+|-----------|------------------|---------------|
 | Bahamas Bowl| **buffalo 39**<br>charlotte 25 | **buffalo 31**<br>charlotte 9 |
 | Frisco Bowl| **utah state 42**<br>kent state 24 | utah state 41<br>**kent state 51** |
 | New Mexico Bowl| central michigan 15<br>**s diego state 29** | central michigan 11<br>**s diego state 48** |
