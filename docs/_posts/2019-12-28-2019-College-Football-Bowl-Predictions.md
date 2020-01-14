@@ -55,4 +55,4 @@ These are predictions produced from an evolution of the model that I have been u
 | Idaho Potato Bowl| **ohio 35**<br>nevada 30 | **ohio 30**<br>nevada 21 |
 | Armed Forces Bowl| **southern miss 33**<br>tulane (la) 29 | southern miss 13<br>**tulane (la) 30** |
 | LendingTree Bowl| **la lafayet 40**<br>miami (oh) 24 | **la lafayet 27**<br>miami (oh) 17 |
-| CFP National Championship | clemson 31<br>**lsu 37** |  |
+| CFP National Championship | #3 clemson 31<br>**#1 lsu 37** |  |
