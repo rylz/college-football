@@ -35,23 +35,24 @@ These are predictions produced from an evolution of the model that I have been u
 | Cheez-It Bowl| **#25 air force 36**<br>washington state 23 | **#25 air force 31**<br>washington state 21 |
 | Cotton Bowl| #16 memphis 26<br>**#12 penn state 29** | #16 memphis 39<br>**#12 penn state 53** |
 | Camping World Bowl| **#14 notre dame 36**<br>iowa state 23 | **#14 notre dame 33**<br>iowa state 9 |
-| Peach Bowl| #6 oklahoma 36<br>**#1 lsu 50** |  |
-| Fiesta Bowl| #3 clemson 22<br>**#2 ohio state 41** |  |
-| First Responder Bowl| western kentucky 25<br>**western michigan 33** |  |
-| Redbox Bowl| **cal 28**<br>illinois 24 |  |
-| Music City Bowl| **mississippi state 45**<br>louisville 34 |  |
-| Orange Bowl| **#7 fla 36**<br>#22 virginia 18 |  |
-| Belk Bowl| virginia tech 24<br>**kentucky 25** |  |
-| Sun Bowl| florida state 22<br>**arizona state 28** |  |
-| Liberty Bowl| **#23 navy 29**<br>kansas state 22 |  |
-| Arizona Bowl| **wyoming 31**<br>georgia state 16 |  |
-| Alamo Bowl| **#5 utah 36**<br>texas 20 |  |
-| Citrus Bowl| #17 michigan 23<br>**#9 alabama 33** |  |
-| Outback Bowl| #15 minnesota 13<br>**#11 auburn 27** |  |
-| Rose Bowl| #13 oregon 22<br>**#10 wisconsin 23** |  |
-| Sugar Bowl| **#4 georgia 26**<br>#8 baylor 20 |  |
-| Birmingham Bowl| boston college 24<br>**#21 cincinnati 27** |  |
-| TaxSlayer Bowl| **indiana 29**<br>tennessee 24 |  |
-| Idaho Potato Bowl| **ohio 35**<br>nevada 30 |  |
-| Armed Forces Bowl| **southern miss 33**<br>tulane (la) 29 |  |
-| LendingTree Bowl| **la lafayet 40**<br>miami (oh) 24 |  |
+| Peach Bowl| #6 oklahoma 36<br>**#1 lsu 50** | #6 oklahoma 28<br>**#1 lsu 63** |
+| Fiesta Bowl| #3 clemson 22<br>**#2 ohio state 41** | **#3 clemson 29**<br>#2 ohio state 23 |
+| First Responder Bowl| western kentucky 25<br>**western michigan 33** | **western kentucky 23**<br>western michigan 20 |
+| Music City Bowl| **mississippi state 45**<br>louisville 34 | mississippi state 28<br>**louisville 38** |
+| Redbox Bowl| **cal 28**<br>illinois 24 | **cal 35**<br>illinois 20 |
+| Orange Bowl| **#7 fla 36**<br>#22 virginia 18 | **#7 fla 36**<br>#22 virginia 28 |
+| Belk Bowl| virginia tech 24<br>**kentucky 25** | virginia tech 30<br>**kentucky 37** |
+| Sun Bowl| florida state 22<br>**arizona state 28** | florida state 14<br>**arizona state 20** |
+| Liberty Bowl| **#23 navy 29**<br>kansas state 22 | **#23 navy 20**<br>kansas state 17 |
+| Arizona Bowl| **wyoming 31**<br>georgia state 16 | **wyoming 38**<br>georgia state 17 |
+| Alamo Bowl| **#5 utah 36**<br>texas 20 | #5 utah 10<br>**texas 38** |
+| Citrus Bowl| #17 michigan 23<br>**#9 alabama 33** | #17 michigan 16<br>**#9 alabama 35** |
+| Outback Bowl| #15 minnesota 13<br>**#11 auburn 27** | **#15 minnesota 31**<br>#11 auburn 24 |
+| Rose Bowl| #13 oregon 22<br>**#10 wisconsin 23** | **#13 oregon 28**<br>#10 wisconsin 27 |
+| Sugar Bowl| **#4 georgia 26**<br>#8 baylor 20 | **#4 georgia 26**<br>#8 baylor 14 |
+| Birmingham Bowl| boston college 24<br>**#21 cincinnati 27** | boston college 6<br>**#21 cincinnati 38** |
+| TaxSlayer Bowl| **indiana 29**<br>tennessee 24 | indiana 22<br>**tennessee 23** |
+| Idaho Potato Bowl| **ohio 35**<br>nevada 30 | **ohio 30**<br>nevada 21 |
+| Armed Forces Bowl| **southern miss 33**<br>tulane (la) 29 | southern miss 13<br>**tulane (la) 30** |
+| LendingTree Bowl| **la lafayet 40**<br>miami (oh) 24 | **la lafayet 27**<br>miami (oh) 17 |
+| CFP National Championship | clemson 31<br>**lsu 37** |  |
