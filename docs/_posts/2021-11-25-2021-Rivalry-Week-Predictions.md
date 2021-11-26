@@ -5,7 +5,7 @@ excerpt: Riley Patterson's pagerank-based model predictions for rivalry week 202
 image: /images/2021_rivalry_predictions.png
 ---
 
-These are predictions produced from an evolution of the model that I have been using for years: a random forest regression run independently to produce each team's score in a given game on the following features:
+These are predictions produced from an evolution of the model that I have been using for years: a random forest regression which independently predicts each team's score in a given game on the following features:
 * difference in opponents' pagerank in a graph of past games, with edges from losers to winners weighted by the margin of victory
 * average points scored by the team
 * average points allowed by the other team
