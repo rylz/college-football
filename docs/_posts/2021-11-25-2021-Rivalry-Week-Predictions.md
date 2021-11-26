@@ -2,7 +2,7 @@
 title: 2021 College Football Rivalry Week Predictions
 layout: post
 excerpt: Riley Patterson's pagerank-based model predictions for rivalry week 2021.
-image: 2021_rivalry_predictions.png
+image: {{site.baseurl}}/images/2021_rivalry_predictions.png
 ---
 
 These are predictions produced from an evolution of the model that I have been using for years: a random forest regression run independently to produce each team's score in a given game on the following features:
