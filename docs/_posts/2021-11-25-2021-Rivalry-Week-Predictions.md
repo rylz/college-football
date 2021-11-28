@@ -110,12 +110,12 @@ As has often been the case with this model, this week's predictions narrowly out
 Here's a survey of how some of my predictions' larger disagreements against the Vegas spread performed. These are all games that included at least one AP-ranked opponent, where either my spread differed by 7 or more vs. Vegas, or we disagreed on who the actual winner of the game would be:
 
 | Actual Result | Predicted Spread | Vegas Spread |
-| **#8 ole miss 31**<br>mississippi state 21 | *ole miss -4* | mississipi state -2 |
-| **#17 iowa 28**<br>nebraska 21 | *iowa -7* | nebraska -1.5 |
-| n carolina 30<br>**#24 nc state 34** | nc state -14 | *nc state -5.5* |
-| **#21 wake forest (nc) 41**<br>boston college 10 | *wake forest -16* | wake forest -6 |
-| #2 ohio state 27<br>**#6 michigan 42** | ohio state -16 | *ohio state -6.5* |
-| penn state 27<br>**#12 michigan state 30** | *michigan state -3* | penn state -4 |
+| **#8 ole miss 31**<br>mississippi state 21 | **ole miss -4** | mississipi state -2 |
+| **#17 iowa 28**<br>nebraska 21 | **iowa -7** | nebraska -1.5 |
+| n carolina 30<br>**#24 nc state 34** | nc state -14 | **nc state -5.5** |
+| **#21 wake forest (nc) 41**<br>boston college 10 | **wake forest -16** | wake forest -6 |
+| #2 ohio state 27<br>**#6 michigan 42** | ohio state -16 | **ohio state -6.5** |
+| penn state 27<br>**#12 michigan state 30** | **michigan state -3** | penn state -4 |
 
 4-2 in Rivalry Week's big games doesn't feel so bad, though of course it sucks to whiff so hard on the big one in Ann Arbor.
 
