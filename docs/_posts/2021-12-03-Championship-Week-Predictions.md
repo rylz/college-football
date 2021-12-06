@@ -8,16 +8,16 @@ image: /images/2021_championship_predictions.png
 Following are this week's round of predictions from my pagerank+random forest model detailed in [the technical approach section of this post]({{ site.baseurl }}/Predicting-the-2017-College-Football-Bowl-Season/). My full-game simulation model is still a work-in-progress, so that'll have to wait for bowl season. Here's to a championship week even just 10% as exciting as last week's rivalry games!
 
 | Prediction | Actual Result |
-| #10 oregon 28<br>**#17 utah 29** |  |
-| #9 baylor 15<br>**#5 oklahoma state 26** |  |
-| kent state 40<br>niu 40 |  |
-| utah state 17<br>**#19 s diego state 25** |  |
-| appalachian state 21<br>**#24 la lafayet 35** |  |
-| #1 georgia 32<br>**#3 alabama 37** |  |
-| #21 houston 20<br>**#4 cincinnati 29** |  |
-| **#15 pitt 38**<br>#16 wake forest (nc) 35 |  |
-| **#2 michigan 27**<br>#13 iowa 18 |  |
-| **usc 29**<br>cal 26 |  |
+| #10 oregon 28<br>**#14 utah 29** | #10 oregon 10<br>**#14 utah 38** |
+| #9 baylor 15<br>**#5 oklahoma state 26** | **#9 baylor 21**<br>#5 oklahoma state 16 |
+| kent state 40<br>niu 40 | kent state 23<br>**niu 41** |
+| utah state 17<br>**#19 s diego state 25** | **utah state 46**<br>#19 s diego state 13 |
+| appalachian state 21<br>**#20 la lafayet 35** | appalachian state 16<br>**#20 la lafayet 24** |
+| #1 georgia 32<br>**#4 alabama 37** | #1 georgia 24<br>**#4 alabama 41** |
+| #16 houston 20<br>**#3 cincinnati 29** | #16 houston 20<br>**#3 cincinnati 35** |
+| **#17 pitt 38**<br>#18 wake forest (nc) 35 | **#17 pitt 45**<br>#18 wake forest (nc) 21 |
+| **#2 michigan 27**<br>#15 iowa 18 | **#2 michigan 42**<br>#15 iowa 3 |
+| **usc 29**<br>cal 26 | usc 14<br>**cal 24** |
 
 The games with the biggest playoff implications are the Big Ten, Big 12, AAC, and SEC championships:
 
