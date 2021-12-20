@@ -18,7 +18,7 @@ Starting a few seasons ago, I decided to play around with probabilistic models t
 * it will open up a lot of fun post-hoc analysis, like "how much did that fumble change the game?"
 * it will likely at least be useful in conjunction with my regression models, either to help understand variance in my predictions or as part of an ensemble model.
 
-## Guassian Naive Bayes for Drive Prediction
+## Gaussian Naive Bayes for Drive Prediction
 
 The primary probabilistic model I have been analyzing is built on Gaussian Naive Bayes (GNB) with the following features:
 
@@ -46,7 +46,7 @@ The classification domain is "drive results," the nine possible ways that a foot
 * safety
 * end of half
 
-Using these features, a GNB is trained to classify likely drive results based on game features and drive initial states. Additional GNBs are trained to classify each of points earned or lost, yards, and duration of the drive from initial states for each possible drive result. (i.e. 9x3 = 27 additional models are trained). This is more effective than training a single model to classify 4 dimensional results because points, yards, and duration are learned independently. A game can then be simulated by maintaining a current drive state, sampling drive results, points, yards, and durations from these models, sanitizing the predictions to be within the realm of possibility (i.e. you can drive more than `yards_to_endzone` or take more time than `time_to_half`), and adjusting the drive state for the predicted drive results until a terminal state is reached (with no time remaining in the game). In order to generate a prediction, I run a Monte Carlo simulation for N=1000 full games, and report stats on each team's points, the spread, and the over under for the game.
+Using these features, a GNB is trained to classify likely drive results based on game features and drive initial states. Additional GNBs are trained to classify each of points earned or lost, yards, and duration of the drive from initial states for each possible drive result. (i.e. 9x3 = 27 additional models are trained). This is more effective than training a single model to classify 4 dimensional results because points, yards, and duration are learned independently. A game can then be simulated by maintaining a current drive state, sampling drive results, points, yards, and durations from these models, sanitizing the predictions to be within the realm of possibility (i.e. you can't drive more than `yards_to_endzone` or take more time than `time_to_half`), and updating the drive state for the predicted drive results until a terminal state is reached (with no time remaining in the game). In order to generate a prediction, I run a Monte Carlo simulation for N=1000 full games, and report stats on each team's points, the spread, and the over under for the game.
 
 ## Applications
 
