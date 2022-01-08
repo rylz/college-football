@@ -81,40 +81,40 @@ The simulation was predicting a 2 point Clemson win at the start of this drive.
 | eastern michigan 23<br>**Liberty University 31** | eastern michigan 17<br>**Liberty University 25** | eastern michigan 20<br>**Liberty University 56** |
 | **utah state 34**<br>oregon state 33 | **utah state 22**<br>oregon state 20 | **utah state 24**<br>oregon state 13 |
 | **#16 la lafayet 30**<br>marshall (wv) 20 | **#16 la lafayet 28**<br>marshall (wv) 17 | **#16 la lafayet 36**<br>marshall (wv) 21 |
-| **old dominion 31**<br>tulsa 25 | old dominion 18<br>**tulsa 21** |  |
-| kent state 30<br>**wyoming 33** | kent state 19<br>**wyoming 24** |  |
-| #24 utsa 26<br>**s diego state 27** | **#24 utsa 25**<br>s diego state 19 |  |
-| missouri 27<br>**army 43** | missouri 13<br>**army 35** |  |
-| **unt 27**<br>miami (oh) 26 | unt 16<br>**miami (oh) 23** |  |
-| ucf 31<br>**fla 34** | ucf 15<br>**fla 27** |  |
+| **old dominion 31**<br>tulsa 25 | old dominion 18<br>**tulsa 21** | old dominion 17<br>**tulsa 30** |
+| kent state 30<br>**wyoming 33** | kent state 19<br>**wyoming 24** | kent state 38<br>**wyoming 52** |
+| #24 utsa 26<br>**s diego state 27** | **#24 utsa 25**<br>s diego state 19 | #24 utsa 24<br>**s diego state 38** |
+| missouri 27<br>**army 43** | missouri 13<br>**army 35** | missouri 22<br>**army 24** |
+| **unt 27**<br>miami (oh) 26 | unt 16<br>**miami (oh) 23** | unt 14<br>**miami (oh) 27** |
+| ucf 31<br>**fla 34** | ucf 15<br>**fla 27** | **ucf 29**<br>fla 17 |
 | memphis 29<br>hawai i 29 | **memphis 23**<br>hawai i 18 |  |
-| georgia state 21<br>**ball state 31** | georgia state 18<br>**ball state 20** |  |
-| western michigan 30<br>**nevada 42** | western michigan 17<br>**nevada 26** |  |
+| georgia state 21<br>**ball state 31** | georgia state 18<br>**ball state 20** | **georgia state 51**<br>ball state 20 |
+| western michigan 30<br>**nevada 42** | western michigan 17<br>**nevada 26** | **western michigan 52**<br>nevada 24 |
 | **boston college 31**<br>east carolina 20 | **boston college 28**<br>east carolina 13 |  |
-| #21 houston 25<br>**auburn 27** | **#21 houston 24**<br>auburn 23 |  |
-| **air force 30**<br>louisville 18 | air force 21<br>**louisville 30** |  |
-| **mississippi state 36**<br>texas tech 23 | **mississippi state 32**<br>texas tech 14 |  |
+| #21 houston 25<br>**auburn 27** | **#21 houston 24**<br>auburn 23 | **#21 houston 17**<br>auburn 13 |
+| **air force 30**<br>louisville 18 | air force 21<br>**louisville 30** | **air force 31**<br>louisville 28 |
+| **mississippi state 36**<br>texas tech 23 | **mississippi state 32**<br>texas tech 14 | mississippi state 7<br>**texas tech 34** |
 | ucla 30<br>**#18 nc state 33** | ucla 11<br>**#18 nc state 42** |  |
-| west virginia 17<br>**minnesota 20** | west virginia 13<br>**minnesota 27** |  |
+| west virginia 17<br>**minnesota 20** | west virginia 13<br>**minnesota 27** | west virginia 6<br>**minnesota 18** |
 | **smu 44**<br>virginia 34 | smu 19<br>**virginia 33** |  |
-| maryland 21<br>**virginia tech 28** | maryland 15<br>**virginia tech 25** |  |
-| **#19 clemson 27**<br>iowa state 24 | **#19 clemson 28**<br>iowa state 17 |  |
-| #15 oregon 28<br>**#14 oklahoma 33** | #15 oregon 19<br>**#14 oklahoma 25** |  |
-| **n carolina 36**<br>south carolina 24 | **n carolina 29**<br>south carolina 14 |  |
-| tennessee 29<br>**purdue 33** | tennessee 22<br>purdue 22 |  |
-| #13 pitt 28<br>#11 michigan state 28 | #13 pitt 21<br>**#11 michigan state 25** |  |
-| **wisconsin 23**<br>arizona state 13 | **wisconsin 24**<br>arizona state 20 |  |
+| maryland 21<br>**virginia tech 28** | maryland 15<br>**virginia tech 25** | **maryland 54**<br>virginia tech 10 |
+| **#19 clemson 27**<br>iowa state 24 | **#19 clemson 28**<br>iowa state 17 | **#19 clemson 20**<br>iowa state 13 |
+| #15 oregon 28<br>**#14 oklahoma 33** | #15 oregon 19<br>**#14 oklahoma 25** | #15 oregon 32<br>**#14 oklahoma 47** |
+| **n carolina 36**<br>south carolina 24 | **n carolina 29**<br>south carolina 14 | n carolina 21<br>**south carolina 38** |
+| tennessee 29<br>**purdue 33** | tennessee 22<br>purdue 22 | tennessee 45<br>**purdue 48** |
+| #13 pitt 28<br>#11 michigan state 28 | #13 pitt 21<br>**#11 michigan state 25** | #13 pitt 21<br>**#11 michigan state 31** |
+| **wisconsin 23**<br>arizona state 13 | **wisconsin 24**<br>arizona state 20 | **wisconsin 20**<br>arizona state 13 |
 | #20 wake forest (nc) 19<br>**#23 texas a&m 32** | #20 wake forest (nc) 19<br>**#23 texas a&m 27** |  |
 | washington state 25<br>**miami (fl) 29** | washington state 11<br>**miami (fl) 39** |  |
 | central michigan 22<br>**boise state 33** | central michigan 17<br>**boise state 24** |  |
-| #4 cincinnati 23<br>**#1 alabama 36** | #4 cincinnati 12<br>**#1 alabama 42** |  |
-| #3 georgia 24<br>**#2 michigan 31** | #3 georgia 21<br>**#2 michigan 33** |  |
-| penn state 22<br>**#22 arkansas 23** | penn state 13<br>**#22 arkansas 29** |  |
-| **#17 iowa 24**<br>#25 kentucky 21 | **#17 iowa 21**<br>#25 kentucky 20 |  |
-| **#9 oklahoma state 23**<br>#5 notre dame 20 | #9 oklahoma state 18<br>**#5 notre dame 29** |  |
-| #10 utah 24<br>**#7 ohio state 40** | #10 utah 14<br>**#7 ohio state 38** |  |
-| **#6 baylor 32**<br>#8 ole miss 23 | #6 baylor 22<br>**#8 ole miss 25** |  |
-| **lsu 22**<br>kansas state 20 | **lsu 24**<br>kansas state 17 |  |
+| #4 cincinnati 23<br>**#1 alabama 36** | #4 cincinnati 12<br>**#1 alabama 42** | #4 cincinnati 6<br>**#1 alabama 27** |
+| #3 georgia 24<br>**#2 michigan 31** | #3 georgia 21<br>**#2 michigan 33** | **#3 georgia 34**<br>#2 michigan 11 |
+| penn state 22<br>**#22 arkansas 23** | penn state 13<br>**#22 arkansas 29** | penn state 10<br>**#22 arkansas 24** |
+| **#17 iowa 24**<br>#25 kentucky 21 | **#17 iowa 21**<br>#25 kentucky 20 | #17 iowa 17<br>**#25 kentucky 20** |
+| **#9 oklahoma state 23**<br>#5 notre dame 20 | #9 oklahoma state 18<br>**#5 notre dame 29** | **#9 oklahoma state 37**<br>#5 notre dame 35 |
+| #10 utah 24<br>**#7 ohio state 40** | #10 utah 14<br>**#7 ohio state 38** | #10 utah 45<br>**#7 ohio state 48** |
+| **#6 baylor 32**<br>#8 ole miss 23 | #6 baylor 22<br>**#8 ole miss 25** | **#6 baylor 21**<br>#8 ole miss 7 |
+| **lsu 22**<br>kansas state 20 | **lsu 24**<br>kansas state 17 | lsu 20<br>**kansas state 42** |
 
 ## Up Next
 
