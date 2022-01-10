@@ -11,7 +11,7 @@ Before the national championship game kicks off tonight, I want to share my 2 mo
 
 Interestingly, both models predict a double-digit Alabama victory, in stark contrast to Vegas' Georgia -2.5 spread.
 
-My Random Forests score prediction model predicts: Georgia 23 - **27 Alabama**.
+My Random Forests score prediction model predicts: Georgia 23 - **37 Alabama**.
 
 My Gaussian Naive Bayes drive simulation model (evaluated across 1000 simulations) predicts: Georgia 15 - **42 Alabama**.
 
