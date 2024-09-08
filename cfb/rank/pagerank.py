@@ -1,4 +1,4 @@
-from pygraph.classes.digraph import digraph
+from pygraph.classes.directed_graph import DirectedGraph
 from . import pygraph_pagerank
 
 import cfb
@@ -42,7 +42,7 @@ class _Pagerank(cfb.ranking.Ranking):
 
   def compile(self):
     # build the digraph
-    gr = digraph()
+    gr = DirectedGraph()
     for game in self.games:
       winner, loser = self.node_fn(game)
       if not gr.has_node(winner):
