@@ -1,5 +1,5 @@
 ---
-title: Bayesian Modeling to Anaylze and Simulate College Football
+title: Bayesian Modeling to Analyze and Simulate College Football
 layout: post
 excerpt: This bowl season, I predict game outcomes using a Monte Carlo simulation of a Bayesian model for predicting games drive-by-drive based on a current state vector and past performance of the current offense and defense. I compare this model to the simpler random forests prediction of overall game scores that I have been using for years, and present predictions for this bowl season using both models.
 ---
