@@ -14,9 +14,6 @@ Another quick week of just predictions:
 | kent state 25<br>ball state 25 | kent state 15<br>**ball state 16** | kent state 13<br>**ball state 17** |
 | utsa 17<br>**south florida 49** | utsa 6<br>**south florida 48** | utsa 23<br>**south florida 55** |
 | georgia southern 31<br>**appalachian state 38** | georgia southern 15<br>**appalachian state 28** | **georgia southern 25**<br>appalachian state 23 |
-missing prediction for game 10662: houston @ ucf
-missing prediction for game 10664: northwestern @ usc
-missing prediction for game 10663: tulane (la) @ memphis
 | **smu 35**<br>boston college 20 | **smu 37**<br>boston college 10 |  |
 | **georgia 32**<br>mississippi state 23 | **georgia 24**<br>mississippi state 18 |  |
 | **James Madison University 45**<br>marshall (wv) 21 | **James Madison University 32**<br>marshall (wv) 15 |  |
